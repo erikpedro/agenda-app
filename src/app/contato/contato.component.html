@@ -1,6 +1,6 @@
 <mat-toolbar>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
+      <mat-icon>account_circle</mat-icon>
     </button>
     <span>My Contacts</span>
     <span class="example-spacer"></span>
@@ -14,9 +14,24 @@
 
   <mat-tab-group>
 
-    <mat-tab label="Todos"></mat-tab>
 
-    <mat-tab label="Novo">
+    
+    <mat-tab>
+      <ng-template mat-tab-label >
+        <mat-icon>list</mat-icon>
+         Todos
+      </ng-template>
+    </mat-tab>
+
+
+
+
+
+    <mat-tab>
+      <ng-template mat-tab-label >
+        <mat-icon> face </mat-icon>
+          Novo
+      </ng-template>
         <mat-card class="half-width">
           <mat-card-title>Novo Contato</mat-card-title>
             <form [formGroup]="formulario" (ngSubmit)="submit()" >
