@@ -19,4 +19,9 @@ export class ContatoService {
   }
 
 
+  list() : Observable<Contato[]>{
+    return this.http.get<any>(this.url);
+  }
+
+
 }
